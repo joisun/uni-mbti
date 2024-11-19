@@ -1,0 +1,26 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "MBTI专业测试"
+			}
+		},
+		{
+			"path": "pages/measurement/index",
+			"style": {
+			}
+		},
+		{
+			"path": "pages/resultAnalyse/index",
+			"style": {
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "MBTI专业测试",
+		"navigationBarBackgroundColor": "#4c50ae",
+		"backgroundColor": "#4c50ae"
+	}
+}
