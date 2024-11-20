@@ -1,7 +1,7 @@
 <template>
-	<view class="h-full  w-full relative">
+	<view class="h-full  w-full relative bg-gradient-to-b from-[#4c50ae] to-[#6569bd]">
 		<img :src="bgimgtop" alt="" srcset="" class="w-full absolute h-3/4 top-0" />
-		<img :src="bgimg" alt="" srcset="" class="w-full absolute bottom-0" />
+		<img :src="bgimg" alt="" srcset="" class="w-full absolute h-1/3 bottom-0" />
 		<view class="absolute inset-0 overflow-y-auto">
 			<slot />
 		</view>

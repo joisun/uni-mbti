@@ -1,7 +1,7 @@
 <template>
 	<view class="flex justify-between text-xs text-white font-semibold px-4  mt-6">
 		<view class="">
-			<img class="h-6 animate-bounce" :src="frog" alt="" srcset="" />
+			<img class="h-6 w-6 animate-bounce" :src="frog" alt="" srcset="" />
 		</view>
 		<view class="flex gap-4">
 			<view class="text-red-400 flex items-center gap-1">

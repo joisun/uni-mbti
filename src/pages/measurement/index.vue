@@ -1,26 +1,26 @@
 <template>
 	<Background>
 		<!-- <view class="bg-purple-50/40 text-white text-center text-sm">按照你的第一直觉回答问题，会让结果更加准确哦</view> -->
-		<view class="content p-4 ">
-			<view v-if="!isFinished" class="que bg-white/40 rounded-2xl p-4 text-white text-xl relative h-28">
+		<view class="content p-4">
+			<view v-if="!isFinished" class="bg-white/40 rounded-2xl p-4 text-white text-xl relative h-28">
 				{{currentQuestion}}
-				<img class="absolute bottom-6 right-2 h-6 animate-bounce [animation-delay:-0.5s]" :src="frog" alt="" srcset="" />
+				<img class="absolute bottom-6 right-2 h-6 w-6 animate-bounce [animation-delay:-0.5s]" :src="frog" alt="" srcset="" />
 				<view class="absolute text-sm right-2 bottom-2">
 					{{totalQuestionCount}}/{{perCategoryQuestionMaxNumb*4 + 10}}
 				</view>
 			</view>
 			<ScoreMarker v-if="!isFinished" @selected="handleSelected" />
 			<view v-if="isFinished" class="font-bold text-xl text-center text-white">辛苦啦！终于完成啦！🎉</view>
-			<img :src="finishSvg" alt="" v-if="isFinished"/>
-			<Button type="red" v-if="totalQuestionCount !== 1"  class="my-2 text-lg font-semibold relative" @click="handleLastQuestion">上一题
-				<ArrowReturnSvgIcon class="text-xl ml-2" />
-			</Button>
+			<img class="w-full h-48" :src="finishSvg" alt="" v-if="isFinished"/>
+			<ButtonComponent type="red" v-if="totalQuestionCount !== 1" class="text-lg font-semibold relative" @tap.native="handleLastQuestion">上一题
+				<img :src="ArrowReturnSvgIcon"  class="h-5 w-5 ml-2"/>
+			</ButtonComponent>
 			
 			
-			<Button v-if="isFinished" type="green" @click="handleSubmit"
+			<ButtonComponent v-if="isFinished" type="green" @tap.native="handleSubmit"
 				class="my-2 text-lg font-semibold bg-green-500 active:bg-green-600 relative">生成报告
-				<img class="absolute -top-6 right-6 h-6 animate-bounce [animation-delay:-1s]" :src="frog" alt="" srcset="" />
-			</Button>
+				<img class="absolute -top-6 right-6 h-6 w-6 animate-bounce [animation-delay:-1s]" :src="frog" alt="" srcset="" />
+			</ButtonComponent>
 			
 		</view>
 	</Background>
@@ -30,8 +30,8 @@
 	import { ref, watch, computed } from 'vue'
 	import { onLoad } from "@dcloudio/uni-app"
 	import Background from "@/components/Background.vue"
-	import ArrowReturnSvgIcon from "@/components/Icons/ArrowReturnSvgIcon.vue"
-	import Button from "@/components/Button.vue"
+	import ArrowReturnSvgIcon from "@/assets/Icons/ArrowReturnSvgIcon.svg"
+	import ButtonComponent from "@/components/ButtonComponent.vue"
 	import ScoreMarker from "@/components/ScoreMarker.vue"
 	import { testType } from '@/consts';
 	import { data } from "@/data"

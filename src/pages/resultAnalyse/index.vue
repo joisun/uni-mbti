@@ -7,7 +7,7 @@
 				<!-- 角色图片 -->
 				<view
 					class="left rounded-full p-2 bg-gradient-to-br from-white to-transparent flex shrink-0 justify-center items-center">
-					<img class="h-28" :src="targetType?.src" alt="" />
+					<img class="h-28 w-28" :src="targetType?.src" alt="" />
 				</view>
 				<!-- 描述名 charactor -->
 				<view class="right flex flex-col items-start">
